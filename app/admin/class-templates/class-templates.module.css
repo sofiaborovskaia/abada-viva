@@ -1,0 +1,178 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin: 0;
+}
+
+.createButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.createButton:hover {
+  background-color: #374151;
+}
+
+.formContainer {
+  margin-bottom: 2rem;
+}
+
+.templateList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.templateCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: box-shadow 0.2s;
+}
+
+.templateCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.templateInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.templateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.templateName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.templateSchedule {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.templateDescription {
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+}
+
+.templateMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.metaItem {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.templateActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.editButton,
+.deleteButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.editButton {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.editButton:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.deleteButton {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.editButton:disabled,
+.deleteButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px dashed #d1d5db;
+}
+
+.emptyText {
+  color: #6b7280;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.emptyButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.emptyButton:hover {
+  background-color: #374151;
+}

@@ -24,9 +24,14 @@ export default function Navigation() {
               My Bookings
             </Link>
           ) : (
-            <Link href="/admin/bookings" className={styles.link}>
-              Booking Overview
-            </Link>
+            <>
+              <Link href="/admin/class-templates" className={styles.link}>
+                Class Templates
+              </Link>
+              <Link href="/admin/bookings" className={styles.link}>
+                Booking Overview
+              </Link>
+            </>
           )}
           <Link href="/profile" className={styles.link}>
             My Profile
