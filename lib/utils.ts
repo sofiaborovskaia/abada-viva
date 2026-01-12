@@ -94,3 +94,29 @@ export function sortInstancesByDateTime(
     return a.time.localeCompare(b.time);
   });
 }
+
+/**
+ * Get instances for the current week (Monday to Sunday)
+ */
+export function getThisWeeksInstances(
+  instances: ClassInstance[]
+): ClassInstance[] {
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  // Get Monday of current week
+  const dayOfWeek = today.getDay();
+  const diff = dayOfWeek === 0 ? -6 : 1 - dayOfWeek; // Sunday is 0, Monday is 1
+  const monday = new Date(today);
+  monday.setDate(today.getDate() + diff);
+
+  // Get Sunday of current week
+  const sunday = new Date(monday);
+  sunday.setDate(monday.getDate() + 6);
+  sunday.setHours(23, 59, 59, 999);
+
+  return instances.filter((instance) => {
+    const instanceDate = new Date(instance.date);
+    return instanceDate >= monday && instanceDate <= sunday;
+  });
+}

@@ -1,0 +1,198 @@
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: white;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.available {
+  border-left: 4px solid #10b981;
+}
+
+.card.almostFull {
+  border-left: 4px solid #f59e0b;
+}
+
+.card.full {
+  border-left: 4px solid #ef4444;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.header:hover {
+  background-color: #f9fafb;
+}
+
+.mainInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.className {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.metaInfo {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.time,
+.location,
+.teacher {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.time {
+  font-weight: 500;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.capacity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.count {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.progressBar {
+  width: 120px;
+  height: 6px;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #10b981, #059669);
+  transition: width 0.3s;
+}
+
+.card.almostFull .progress {
+  background: linear-gradient(to right, #f59e0b, #d97706);
+}
+
+.card.full .progress {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+}
+
+.percentageText {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: right;
+}
+
+.expandIcon {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  padding: 0.5rem;
+}
+
+.studentList {
+  padding: 1.25rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.studentListTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.students {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.student {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+}
+
+.studentName {
+  font-weight: 500;
+  color: #111827;
+}
+
+.bookingTime {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 1rem;
+  margin: 0;
+  font-style: italic;
+}
