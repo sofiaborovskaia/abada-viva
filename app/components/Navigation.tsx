@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useUser } from "@/contexts/UserContext";
+import Button from "./Button";
 import styles from "./Navigation.module.css";
 
 export default function Navigation() {
@@ -11,7 +13,14 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          Abada Viva
+          <Image
+            src="/abada-capoeira-logo.png"
+            alt="Abadá Capoeira"
+            width={40}
+            height={40}
+            className={styles.logoImage}
+          />
+          <span className={styles.logoText}>Abadá Viva</span>
         </Link>
         <div className={styles.links}>
           {user.role === "student" && (
@@ -36,9 +45,9 @@ export default function Navigation() {
           <Link href="/profile" className={styles.link}>
             My Profile
           </Link>
-          <button onClick={toggleRole} className={styles.roleToggle}>
+          <Button onClick={toggleRole} variant="primary">
             {user.role === "student" ? "👨‍🎓 Student" : "👨‍🏫 Teacher"}
-          </button>
+          </Button>
         </div>
       </div>
     </nav>

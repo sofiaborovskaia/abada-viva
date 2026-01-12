@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abada Viva - Capoeira Class Booking",
-  description: "Book your capoeira classes with Abada Viva",
+  title: "Abadá Viva - Capoeira Class Booking",
+  description: "Book your capoeira classes with Abadá Viva",
 };
 
 export default function RootLayout({
