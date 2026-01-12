@@ -4,12 +4,42 @@
   padding: 2rem;
 }
 
+.header {
+  margin-bottom: 2rem;
+}
+
 .title {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.placeholder {
+.subtitle {
   color: #6b7280;
+  margin: 0;
+}
+
+.dayGroup {
+  margin-bottom: 2.5rem;
+}
+
+.dayHeader {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.classList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 3rem;
+  font-size: 1.125rem;
 }

@@ -1,0 +1,124 @@
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  background: white;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.card.available {
+  border-left: 4px solid #10b981;
+}
+
+.card.almostFull {
+  border-left: 4px solid #f59e0b;
+}
+
+.card.full {
+  border-left: 4px solid #ef4444;
+  background: #fef2f2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.time {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.details {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.details p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.teacher,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.capacity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.spotsLeft {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.total {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  background-color: #111827;
+  color: white;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #374151;
+}
+
+.button.booked {
+  background-color: #ef4444;
+}
+
+.button.booked:hover {
+  background-color: #dc2626;
+}
+
+.button.disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.waitlist {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.75rem;
+  color: #f59e0b;
+  font-weight: 500;
+}
