@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { useSchool } from "@/contexts/SchoolContext";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const { school } = useSchool();
+
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
-        <h1 className={styles.title}>Welcome to Abada Viva</h1>
+        <h1 className={styles.title}>{school.name}</h1>
         <p className={styles.description}>
           Your capoeira community is here. Book your classes, manage your
           schedule, and stay connected with your fellow capoeiristas.

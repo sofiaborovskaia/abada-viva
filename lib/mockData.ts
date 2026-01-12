@@ -1,5 +1,13 @@
-import { User, ClassTemplate, ClassInstance, Booking } from "./types";
+import { User, ClassTemplate, ClassInstance, Booking, School } from "./types";
 import { generateAllInstances } from "./utils";
+
+// Mock school
+export const mockSchool: School = {
+  id: "school-1",
+  name: "Abadá Capoeira Lisboa",
+  location: "Lisboa, Portugal",
+  contactEmail: "info@abadalx.com",
+};
 
 // Mock users - you can switch between these
 export const mockStudent: User = {
@@ -7,6 +15,7 @@ export const mockStudent: User = {
   name: "Ana Silva",
   email: "ana@example.com",
   role: "student",
+  schoolId: "school-1",
 };
 
 export const mockTeacher: User = {
@@ -14,12 +23,14 @@ export const mockTeacher: User = {
   name: "Minnie",
   email: "joao@example.com",
   role: "teacher",
+  schoolId: "school-1",
 };
 
 // Class Templates - recurring schedule (what teachers create)
 export const mockClassTemplates: ClassTemplate[] = [
   {
     id: "template-1",
+    schoolId: "school-1",
     name: "Beginner Capoeira",
     description: "Perfect for newcomers to capoeira",
     dayOfWeek: "Monday",
@@ -33,6 +44,7 @@ export const mockClassTemplates: ClassTemplate[] = [
   },
   {
     id: "template-2",
+    schoolId: "school-1",
     name: "All Levels Roda",
     description: "Open roda for all skill levels",
     dayOfWeek: "Monday",
@@ -46,6 +58,7 @@ export const mockClassTemplates: ClassTemplate[] = [
   },
   {
     id: "template-3",
+    schoolId: "school-1",
     name: "Intermediate Capoeira",
     description: "For students with at least 6 months experience",
     dayOfWeek: "Wednesday",
@@ -59,6 +72,7 @@ export const mockClassTemplates: ClassTemplate[] = [
   },
   {
     id: "template-4",
+    schoolId: "school-1",
     name: "Kids Capoeira",
     description: "Fun capoeira classes for children ages 6-12",
     dayOfWeek: "Wednesday",
@@ -72,6 +86,7 @@ export const mockClassTemplates: ClassTemplate[] = [
   },
   {
     id: "template-5",
+    schoolId: "school-1",
     name: "Advanced Training",
     description: "High-intensity training for advanced students",
     dayOfWeek: "Friday",
@@ -85,6 +100,7 @@ export const mockClassTemplates: ClassTemplate[] = [
   },
   {
     id: "template-6",
+    schoolId: "school-1",
     name: "All Levels Roda",
     description: "End of week roda celebration",
     dayOfWeek: "Friday",

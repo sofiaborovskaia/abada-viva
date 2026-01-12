@@ -1,10 +1,19 @@
 export type UserRole = "student" | "teacher";
 
+// School/Organization
+export interface School {
+  id: string;
+  name: string;
+  location?: string;
+  contactEmail?: string;
+}
+
 export interface User {
   id: string;
   name: string;
   email: string;
   role: UserRole;
+  schoolId: string; // belongs to a school
 }
 
 export type DayOfWeek =
@@ -19,6 +28,7 @@ export type DayOfWeek =
 // Class Template - recurring schedule created by teachers
 export interface ClassTemplate {
   id: string;
+  schoolId: string; // belongs to a school
   name: string;
   description?: string;
   dayOfWeek: DayOfWeek;

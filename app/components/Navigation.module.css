@@ -37,7 +37,8 @@
 
 .roleToggle {
   padding: 0.5rem 1rem;
-  background-color: rgb(65, 65, 65);
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 0.375rem;
   font-size: 0.875rem;
