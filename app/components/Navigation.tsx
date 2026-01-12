@@ -14,6 +14,11 @@ export default function Navigation() {
           Abada Viva
         </Link>
         <div className={styles.links}>
+          {user.role === "student" && (
+            <Link href="/book-class" className={styles.link}>
+              Book Class
+            </Link>
+          )}
           {user.role === "student" ? (
             <Link href="/bookings" className={styles.link}>
               My Bookings

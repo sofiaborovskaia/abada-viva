@@ -1,5 +1,38 @@
-import { redirect } from "next/navigation";
+import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function Home() {
-  redirect("/book-class");
+  return (
+    <div className={styles.container}>
+      <div className={styles.hero}>
+        <h1 className={styles.title}>Welcome to Abada Viva</h1>
+        <p className={styles.description}>
+          Your capoeira community is here. Book your classes, manage your
+          schedule, and stay connected with your fellow capoeiristas.
+        </p>
+      </div>
+
+      <div className={styles.card}>
+        <h2 className={styles.cardTitle}>Ready to train?</h2>
+        <p className={styles.cardText}>
+          Browse our upcoming classes and reserve your spot. We offer classes
+          for all levels throughout the week.
+        </p>
+        <Link href="/book-class" className={styles.ctaButton}>
+          Book a Class
+        </Link>
+      </div>
+
+      <div className={styles.reminder}>
+        <p className={styles.reminderText}>
+          💡 <strong>Don't forget:</strong> Please complete your profile so our
+          teachers have all the relevant information about your experience and
+          any special requirements.
+        </p>
+        <Link href="/profile" className={styles.profileLink}>
+          Update Profile →
+        </Link>
+      </div>
+    </div>
+  );
 }
