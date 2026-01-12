@@ -1,12 +1,14 @@
 .nav {
-  border-bottom: 1px solid #e5e7eb;
-  background: white;
+  position: sticky;
+  top: 0;
+
+  background: var(--yellow);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding-block: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,19 +18,19 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--black);
   text-decoration: none;
 }
 
 .logoImage {
-  width: 40px;
-  height: 40px;
   object-fit: contain;
 }
 
 .logoText {
+  font-family: var(--font-lexend);
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -40,22 +42,11 @@
 }
 
 .link {
-  color: #6b7280;
-  text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.2s ease-in-out;
+  padding: 0.1rem 0.2rem;
 }
 
 .link:hover {
-  color: #111827;
-}
-
-.roleToggle {
-  padding: 0.5rem 1rem;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: all 0.2s;
+  transform: translateY(-2px) scale(1.05) rotate(1deg);
+  text-shadow: 0 0 0.5px currentColor, 0 0 0.5px currentColor;
 }

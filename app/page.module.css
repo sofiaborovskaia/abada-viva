@@ -27,19 +27,17 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #111827;
+  color: var(--black);
 }
 
 .description {
   font-size: 1.125rem;
-  color: #6b7280;
   line-height: 1.7;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .card {
-  background: white;
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
   padding: 2rem;
@@ -51,50 +49,28 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #111827;
 }
 
 .cardText {
-  color: #6b7280;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
-.ctaButton {
-  display: inline-block;
-  padding: 0.875rem 2rem;
-  background-color: #111827;
-  color: white;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: background-color 0.2s;
-}
-
-.ctaButton:hover {
-  background-color: #374151;
-}
-
 .reminder {
-  background: #fffbeb;
-  border: 1px solid #fcd34d;
+  background: var(--yellow);
   border-radius: 0.5rem;
   padding: 1.5rem;
 }
 
 .reminderText {
-  color: #78350f;
   margin: 0 0 1rem 0;
   line-height: 1.6;
 }
 
 .profileLink {
-  color: #92400e;
-  font-weight: 500;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .profileLink:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }

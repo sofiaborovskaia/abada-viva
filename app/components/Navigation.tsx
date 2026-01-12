@@ -16,8 +16,8 @@ export default function Navigation() {
           <Image
             src="/abada-capoeira-logo.png"
             alt="Abadá Capoeira"
-            width={40}
-            height={40}
+            width={70}
+            height={70}
             className={styles.logoImage}
           />
           <span className={styles.logoText}>Abadá Viva</span>
@@ -45,7 +45,7 @@ export default function Navigation() {
           <Link href="/profile" className={styles.link}>
             My Profile
           </Link>
-          <Button onClick={toggleRole} variant="primary">
+          <Button onClick={toggleRole} variant="ghost">
             {user.role === "student" ? "👨‍🎓 Student" : "👨‍🏫 Teacher"}
           </Button>
         </div>

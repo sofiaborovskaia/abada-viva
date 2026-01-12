@@ -40,24 +40,6 @@
   border-radius: 4px;
   min-height: 2.5rem;
 }
-
-.editButton {
-  margin-top: 1rem;
-  padding: 0.75rem 2rem;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.editButton:hover {
-  background: #0056b3;
-}
-
 /* Edit Mode */
 .form {
   background: white;
@@ -94,7 +76,7 @@
 .select:focus,
 .textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--green);
 }
 
 .textarea {
@@ -105,38 +87,4 @@
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-}
-
-.saveButton {
-  flex: 1;
-  padding: 0.75rem 2rem;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.saveButton:hover {
-  background: #218838;
-}
-
-.cancelButton {
-  flex: 1;
-  padding: 0.75rem 2rem;
-  background: #6c757d;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.cancelButton:hover {
-  background: #5a6268;
 }
