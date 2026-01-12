@@ -14,9 +14,9 @@ export default function AdminBookingsPage() {
   const sortedInstances = sortInstancesByDateTime(thisWeekInstances);
 
   // Create a map of userId to student name
-  // In real app, this would come from backend
+  // TODO: Will come from the backend in the future
   const studentNames: Record<string, string> = {
-    [mockStudent.id]: mockStudent.name,
+    [mockStudent.id]: mockStudent.firstName,
     // Add more students as needed
   };
 

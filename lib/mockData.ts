@@ -12,18 +12,30 @@ export const mockSchool: School = {
 // Mock users - you can switch between these
 export const mockStudent: User = {
   id: "user-1",
-  name: "Ana Silva",
+  firstName: "Ana",
+  lastName: "Silva",
   email: "ana@example.com",
+  phone: "+351 912 345 678",
   role: "student",
   schoolId: "school-1",
+  graduacao: "Verde",
+  capoeiraExperience:
+    "Treinei por 2 anos na escola de Capoeira Regional antes de vir para Abadá.",
+  medicalConditions: "",
 };
 
 export const mockTeacher: User = {
   id: "user-2",
-  name: "Minnie",
-  email: "joao@example.com",
+  firstName: "Minnie",
+  lastName: "Santos",
+  email: "minnie@example.com",
+  phone: "+351 918 765 432",
   role: "teacher",
   schoolId: "school-1",
+  graduacao: "Marrom",
+  capoeiraExperience:
+    "Comecei com 8 anos em Salvador, Bahia. Treinamento em Capoeira Angola e Regional.",
+  medicalConditions: "",
 };
 
 // Class Templates - recurring schedule (what teachers create)

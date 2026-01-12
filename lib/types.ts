@@ -1,5 +1,25 @@
 export type UserRole = "student" | "teacher";
 
+// Capoeira graduation levels (Abadá belt colors)
+export type Graduacao =
+  | "Crua" // Raw/White
+  | "Crua-Amarela" // White-Yellow
+  | "Amarela" // Yellow
+  | "Amarela-Laranja" // Yellow-Orange
+  | "Laranja" // Orange
+  | "Laranja-Azul" // Orange-Blue
+  | "Azul" // Blue
+  | "Azul-Verde" // Blue-Green
+  | "Verde" // Green
+  | "Verde-Roxa" // Green-Purple
+  | "Roxa" // Purple
+  | "Roxa-Marrom" // Purple-Brown
+  | "Marrom" // Brown
+  | "Marrom-Vermelha" // Brown-Red
+  | "Vermelha" // Red
+  | "Vermelha-Branca" // Red-White
+  | "Branca"; // White
+
 // School/Organization
 export interface School {
   id: string;
@@ -10,10 +30,20 @@ export interface School {
 
 export interface User {
   id: string;
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
+  phone?: string;
   role: UserRole;
-  schoolId: string; // belongs to a school
+  schoolId: string;
+  graduacao?: Graduacao;
+  capoeiraExperience?: string;
+  medicalConditions?: string;
+}
+
+// Legacy helper for display name
+export function getUserFullName(user: User): string {
+  return `${user.firstName} ${user.lastName}`;
 }
 
 export type DayOfWeek =
