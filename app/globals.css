@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+:root {
+  --green: #006332;
+  --light-green: #00a651;
+  --black: #0f0f0f;
+  --white: #ffffff;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

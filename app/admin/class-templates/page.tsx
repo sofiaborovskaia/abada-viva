@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useBooking } from "@/contexts/BookingContext";
 import { useSchool } from "@/contexts/SchoolContext";
 import ClassTemplateForm from "@/app/components/ClassTemplateForm";
+import Button from "@/app/components/Button";
 import { ClassTemplate } from "@/lib/types";
 import styles from "./class-templates.module.css";
 
@@ -50,12 +51,9 @@ export default function ClassTemplatesPage() {
           </p>
         </div>
         {!isCreating && !editingTemplate && (
-          <button
-            onClick={() => setIsCreating(true)}
-            className={styles.createButton}
-          >
+          <Button onClick={() => setIsCreating(true)} variant="primary">
             + New Template
-          </button>
+          </Button>
         )}
       </div>
 
@@ -104,32 +102,29 @@ export default function ClassTemplatesPage() {
               </div>
 
               <div className={styles.templateActions}>
-                <button
+                <Button
                   onClick={() => setEditingTemplate(template)}
-                  className={styles.editButton}
+                  variant="primary"
                   disabled={isCreating || editingTemplate !== null}
                 >
                   Edit
-                </button>
-                <button
+                </Button>
+                <Button
                   onClick={() => handleDelete(template.id)}
-                  className={styles.deleteButton}
+                  variant="danger"
                   disabled={isCreating || editingTemplate !== null}
                 >
                   Delete
-                </button>
+                </Button>
               </div>
             </div>
           ))
         ) : (
           <div className={styles.empty}>
             <p className={styles.emptyText}>No active class templates.</p>
-            <button
-              onClick={() => setIsCreating(true)}
-              className={styles.emptyButton}
-            >
+            <Button onClick={() => setIsCreating(true)} variant="primary">
               Create Your First Template
-            </button>
+            </Button>
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ClassTemplate, DayOfWeek } from "@/lib/types";
+import Button from "./Button";
 import styles from "./ClassTemplateForm.module.css";
 
 interface ClassTemplateFormProps {
@@ -203,16 +204,12 @@ export default function ClassTemplateForm({
       </div>
 
       <div className={styles.formActions}>
-        <button
-          type="button"
-          onClick={onCancel}
-          className={styles.cancelButton}
-        >
+        <Button type="button" onClick={onCancel} variant="ghost">
           Cancel
-        </button>
-        <button type="submit" className={styles.submitButton}>
+        </Button>
+        <Button type="submit" variant="secondary">
           {template ? "Update Template" : "Create Template"}
-        </button>
+        </Button>
       </div>
     </form>
   );

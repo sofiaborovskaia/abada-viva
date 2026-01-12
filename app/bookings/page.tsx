@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useUser } from "@/contexts/UserContext";
 import { useBooking } from "@/contexts/BookingContext";
+import Button from "../components/Button";
+import ButtonLink from "../components/ButtonLink";
 import styles from "./bookings.module.css";
 
 export default function BookingsPage() {
@@ -56,9 +57,9 @@ export default function BookingsPage() {
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>My Bookings</h1>
-        <Link href="/book-class" className={styles.bookButton}>
+        <ButtonLink href="/book-class" variant="primary">
           Book a Class
-        </Link>
+        </ButtonLink>
       </div>
 
       {bookedInstances.length === 0 ? (
@@ -66,9 +67,9 @@ export default function BookingsPage() {
           <p className={styles.emptyText}>
             You don't have any upcoming bookings.
           </p>
-          <Link href="/book-class" className={styles.emptyButton}>
+          <ButtonLink href="/book-class" variant="primary">
             Browse Classes
-          </Link>
+          </ButtonLink>
         </div>
       ) : (
         Object.entries(groupedByDate).map(([date, items]) => (
@@ -98,12 +99,12 @@ export default function BookingsPage() {
                           </span>
                         </div>
                       </div>
-                      <button
+                      <Button
                         onClick={() => handleCancel(item.instance.id)}
-                        className={styles.cancelButton}
+                        variant="danger"
                       >
                         Cancel
-                      </button>
+                      </Button>
                     </div>
                   )
               )}

@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { useUser } from "@/contexts/UserContext";
 import { Graduacao } from "@/lib/types";
+import Button from "../components/Button";
 import styles from "./page.module.css";
 
 export default function ProfilePage() {
@@ -89,12 +90,9 @@ export default function ProfilePage() {
             </p>
           </div>
 
-          <button
-            onClick={() => setIsEditing(true)}
-            className={styles.editButton}
-          >
+          <Button onClick={() => setIsEditing(true)} variant="primary">
             Editar Perfil
-          </button>
+          </Button>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={styles.form}>
@@ -230,16 +228,12 @@ export default function ProfilePage() {
           </div>
 
           <div className={styles.buttonGroup}>
-            <button type="submit" className={styles.saveButton}>
+            <Button type="submit" variant="secondary">
               Salvar
-            </button>
-            <button
-              type="button"
-              onClick={handleCancel}
-              className={styles.cancelButton}
-            >
+            </Button>
+            <Button type="button" onClick={handleCancel} variant="ghost">
               Cancelar
-            </button>
+            </Button>
           </div>
         </form>
       )}
