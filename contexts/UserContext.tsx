@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import { User } from "@/lib/types";
 import { mockStudent, mockTeacher } from "@/lib/mockData";
 
@@ -15,6 +16,7 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export function UserProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User>(mockStudent);
+  const router = useRouter();
 
   const updateUser = (updates: Partial<User>) => {
     setUser({ ...user, ...updates });
@@ -24,12 +26,8 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const toggleRole = () => {
     const newUser = user.role === "student" ? mockTeacher : mockStudent;
     console.log("🔄 Role toggled:", user.role, "→", newUser.role);
-    console.log(
-      "👤 New user:",
-      `${newUser.firstName} ${newUser.lastName}`,
-      `(${newUser.email})`
-    );
     setUser(newUser);
+    router.push("/");
   };
 
   return (
