@@ -24,15 +24,16 @@ export default function Navigation() {
         </Link>
         <div className={styles.links}>
           {user.role === "student" && (
-            <Link href="/book-class" className={styles.link}>
-              Book Class
-            </Link>
+            <>
+              <Link href="/book-class" className={styles.link}>
+                Book Class
+              </Link>
+              <Link href="/bookings" className={styles.link}>
+                My Bookings
+              </Link>
+            </>
           )}
-          {user.role === "student" ? (
-            <Link href="/bookings" className={styles.link}>
-              My Bookings
-            </Link>
-          ) : (
+          {user.role === "teacher" && (
             <>
               <Link href="/admin/class-templates" className={styles.link}>
                 Class Templates
