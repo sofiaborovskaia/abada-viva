@@ -52,13 +52,13 @@
 }
 
 .subtitle {
-  color: #6b7280;
+  color: var(--grey-text);
   margin: 0;
 }
 
 .createButton {
   padding: 0.75rem 1.5rem;
-  background-color: #111827;
+  background-color: var(--black);
   color: white;
   border: none;
   border-radius: 0.375rem;
@@ -83,7 +83,7 @@
 
 .templateCard {
   background: white;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--light-grey);
   border-radius: 0.5rem;
   padding: 1.5rem;
 
@@ -114,18 +114,18 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
-  color: #111827;
+  color: var(--black);
 }
 
 .templateSchedule {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--grey-text);
   white-space: nowrap;
 }
 
 .templateDescription {
-  color: #6b7280;
+  color: var(--grey-text);
   margin: 0 0 1rem 0;
   font-size: 0.875rem;
 }
@@ -138,7 +138,7 @@
 
 .metaItem {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--grey-text);
 }
 
 .templateActions {
@@ -163,7 +163,7 @@
 }
 
 .editButton:hover:not(:disabled) {
-  background-color: #e5e7eb;
+  background-color: var(--light-grey);
 }
 
 .deleteButton {
@@ -192,14 +192,14 @@
 }
 
 .emptyText {
-  color: #6b7280;
+  color: var(--grey-text);
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
 }
 
 .emptyButton {
   padding: 0.75rem 1.5rem;
-  background-color: #111827;
+  background-color: var(--black);
   color: white;
   border: none;
   border-radius: 0.375rem;

@@ -11,7 +11,7 @@
   text-align: center;
   text-decoration: none;
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .button:disabled {
@@ -22,27 +22,29 @@
 /* Primary - Dark background (main CTA) */
 .primary {
   background-color: var(--black);
-  color: white;
+  color: var(--white);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: var(--green);
+  background-color: var(--yellow);
+  color: var(--black);
 }
 
 /* Secondary - Green/Success */
 .secondary {
-  background-color: var(--green);
-  color: white;
+  background-color: var(--yellow);
+  color: var(--black);
 }
 
 .secondary:hover:not(:disabled) {
-  background-color: #36ab50;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 /* Danger - Red for destructive actions */
 .danger {
-  background-color: #dc3545;
-  color: white;
+  background-color: var(--red);
+  color: var(--white);
 }
 
 .danger:hover:not(:disabled) {

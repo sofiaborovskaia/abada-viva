@@ -1,6 +1,6 @@
 .form {
   background: white;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--light-grey);
   border-radius: 0.5rem;
   padding: 2rem;
   max-width: 800px;
@@ -10,7 +10,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 1.5rem 0;
-  color: #111827;
+  color: var(--black);
 }
 
 .formGrid {
@@ -50,7 +50,7 @@
 .select:focus,
 .textarea:focus {
   outline: none;
-  border-color: #111827;
+  border-color: var(--black);
 }
 
 .textarea {
@@ -63,7 +63,7 @@
   justify-content: flex-end;
   gap: 1rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--light-grey);
 }
 
 .cancelButton,
@@ -83,11 +83,11 @@
 }
 
 .cancelButton:hover {
-  background-color: #e5e7eb;
+  background-color: var(--light-grey);
 }
 
 .submitButton {
-  background-color: #111827;
+  background-color: var(--black);
   color: white;
 }
 

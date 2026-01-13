@@ -1,6 +1,6 @@
 .card {
   background: white;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--light-grey);
   border-radius: 0.75rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -15,7 +15,7 @@
 }
 
 .cardText {
-  color: #6b7280;
+  color: var(--grey-text);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -33,12 +33,11 @@
 
 .profileLink {
   display: inline-block;
-  text-decoration: underline;
   transition: 0.2s all ease-in;
 }
 
 .profileLink:hover {
-  transform: scale(1.1);
+  text-decoration: underline;
 }
 
 .info {

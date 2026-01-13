@@ -1,5 +1,5 @@
 .card {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--light-grey);
   border-radius: 0.5rem;
   background: white;
   overflow: hidden;
@@ -19,7 +19,7 @@
 }
 
 .card.full {
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid var(--red);
 }
 
 .header {
@@ -55,12 +55,12 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
-  color: #111827;
+  color: var(--black);
 }
 
 .date {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--grey-text);
   font-weight: 500;
 }
 
@@ -74,7 +74,7 @@
 .location,
 .teacher {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--grey-text);
 }
 
 .time {
@@ -97,7 +97,7 @@
 .count {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--black);
 }
 
 .label {
@@ -114,7 +114,7 @@
 .progressBar {
   width: 120px;
   height: 6px;
-  background-color: #e5e7eb;
+  background-color: var(--light-grey);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -130,12 +130,12 @@
 }
 
 .card.full .progress {
-  background: linear-gradient(to right, #ef4444, #dc2626);
+  background: linear-gradient(to right, var(--red), #dc2626);
 }
 
 .percentageText {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--grey-text);
   text-align: right;
 }
 
@@ -148,7 +148,7 @@
 .studentList {
   padding: 1.25rem;
   background-color: #f9fafb;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--light-grey);
 }
 
 .studentListTitle {
@@ -176,12 +176,12 @@
   padding: 0.75rem;
   background: white;
   border-radius: 0.375rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--light-grey);
 }
 
 .studentName {
   font-weight: 500;
-  color: #111827;
+  color: var(--black);
 }
 
 .bookingTime {

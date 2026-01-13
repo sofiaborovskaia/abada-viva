@@ -11,5 +11,5 @@
 }
 
 .placeholder {
-  color: #6b7280;
+  color: var(--grey-text);
 }
