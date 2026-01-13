@@ -83,6 +83,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
   padding: 1.25rem;
   background: white;
   border: 1px solid #e5e7eb;
