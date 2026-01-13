@@ -24,11 +24,10 @@ export default function Home() {
             className={styles.logo}
           />
         </div>
-        <h1 className={styles.title}>{school.name}</h1>
+        {/* <h1 className={styles.title}>{school.name}</h1> */}
         <p className={styles.description}>
           A sua comunidade de capoeira está aqui. Reserve as suas aulas,
-          gerencie o seu horário e mantenha-se ligado aos seus companheiros
-          capoeiristas.
+          gerencie o seu horário e mantenha-se ligado a nossa escola.
         </p>
       </div>
 

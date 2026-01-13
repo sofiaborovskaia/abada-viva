@@ -8,8 +8,7 @@ export default function HomeStudent() {
       <div className={styles.card}>
         <h2 className={styles.cardTitle}>Pronto para treinar?</h2>
         <p className={styles.cardText}>
-          Explore as nossas próximas aulas e reserve o seu lugar. Oferecemos
-          aulas para todos os níveis durante a semana.
+          Explore as nossas próximas aulas e eventos e reserve o seu lugar.
         </p>
         <ButtonLink href="/book-class" variant="primary">
           Reservar Aula
