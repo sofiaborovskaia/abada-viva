@@ -46,7 +46,7 @@ export default function Navigation() {
             My Profile
           </Link>
           <Button onClick={toggleRole} variant="ghost">
-            {user.role === "student" ? "👨‍🎓 Student" : "👨‍🏫 Teacher"}
+            {user.role === "student" ? "👨‍🎓" : "👨‍🏫"}
           </Button>
         </div>
       </div>

@@ -8,10 +8,13 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding-block: 0.5rem;
+  padding: 0.5rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .logo {

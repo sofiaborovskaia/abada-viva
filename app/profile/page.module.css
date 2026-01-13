@@ -7,7 +7,6 @@
 .title {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #333;
 }
 
 /* View Mode */
@@ -34,15 +33,14 @@
 
 .value {
   font-size: 1rem;
-  color: #333;
   padding: 0.75rem;
-  background: #f8f9fa;
+  background: #f9f9f9;
   border-radius: 4px;
   min-height: 2.5rem;
 }
 /* Edit Mode */
 .form {
-  background: white;
+  background: var(--white);
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -56,7 +54,6 @@
   display: block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #333;
   margin-bottom: 0.5rem;
 }
 

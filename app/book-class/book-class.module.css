@@ -19,6 +19,7 @@
   margin: 0;
 }
 
+/* Todo: abstract */
 .dayGroup {
   margin-bottom: 2.5rem;
 }
@@ -28,7 +29,7 @@
   font-weight: 600;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .classList {
