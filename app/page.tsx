@@ -26,8 +26,9 @@ export default function Home() {
         </div>
         <h1 className={styles.title}>{school.name}</h1>
         <p className={styles.description}>
-          Your capoeira community is here. Book your classes, manage your
-          schedule, and stay connected with your fellow capoeiristas.
+          A sua comunidade de capoeira está aqui. Reserve as suas aulas,
+          gerencie o seu horário e mantenha-se ligado aos seus companheiros
+          capoeiristas.
         </p>
       </div>
 

@@ -7,8 +7,8 @@ import { SchoolProvider } from "@/contexts/SchoolContext";
 import { openSans, lexend } from "./fonts";
 
 export const metadata: Metadata = {
-  title: "Abadá Viva - Capoeira Class Booking",
-  description: "Book your capoeira classes with Abadá Viva",
+  title: "Abadá Viva - Reserva de Aulas de Capoeira",
+  description: "Reserve as suas aulas de capoeira com Abadá Viva",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body className={`${openSans.variable} ${lexend.variable} antialiased`}>
         <SchoolProvider>
           <UserProvider>

@@ -40,22 +40,22 @@ export default function AdminBookingsPage() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>Booking Overview</h1>
-        <p className={styles.subtitle}>This week's classes and attendance</p>
+        <h1 className={styles.title}>Resumo de Reservas</h1>
+        <p className={styles.subtitle}>Aulas desta semana e frequência</p>
       </div>
 
       <div className={styles.statsGrid}>
         <div className={styles.statCard}>
           <span className={styles.statValue}>{totalClasses}</span>
-          <span className={styles.statLabel}>Classes This Week</span>
+          <span className={styles.statLabel}>Aulas desta Semana</span>
         </div>
         <div className={styles.statCard}>
           <span className={styles.statValue}>{totalBookings}</span>
-          <span className={styles.statLabel}>Total Bookings</span>
+          <span className={styles.statLabel}>Total de Reservas</span>
         </div>
         <div className={styles.statCard}>
           <span className={styles.statValue}>{utilizationRate}%</span>
-          <span className={styles.statLabel}>Utilization Rate</span>
+          <span className={styles.statLabel}>Taxa de Ocupação</span>
         </div>
       </div>
 
@@ -70,7 +70,9 @@ export default function AdminBookingsPage() {
             />
           ))
         ) : (
-          <p className={styles.empty}>No classes scheduled for this week.</p>
+          <p className={styles.empty}>
+            Nenhuma aula programada para esta semana.
+          </p>
         )}
       </div>
     </div>

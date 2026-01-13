@@ -10,6 +10,11 @@ export default function BookingsPage() {
   const { user } = useUser();
   const { bookings, instances, unbookClass } = useBooking();
 
+  // Helper to capitalize first letter
+  const capitalizeFirst = (str: string) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
   // Get user's bookings
   const userBookings = bookings.filter(
     (b) => b.userId === user.id && b.status === "booked"
@@ -27,11 +32,13 @@ export default function BookingsPage() {
   // Group by date
   const groupedByDate = bookedInstances.reduce((acc, item) => {
     if (!item) return acc;
-    const dateKey = item.instance.date.toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-    });
+    const dateKey = capitalizeFirst(
+      item.instance.date.toLocaleDateString("pt-PT", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      })
+    );
 
     if (!acc[dateKey]) {
       acc[dateKey] = [];
@@ -48,7 +55,7 @@ export default function BookingsPage() {
   });
 
   const handleCancel = (instanceId: string) => {
-    if (confirm("Are you sure you want to cancel this booking?")) {
+    if (confirm("Tem certeza que deseja cancelar esta reserva?")) {
       unbookClass(instanceId, user.id);
     }
   };
@@ -56,19 +63,19 @@ export default function BookingsPage() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>My Bookings</h1>
+        <h1 className={styles.title}>Minhas Reservas</h1>
         <ButtonLink href="/book-class" variant="primary">
-          Book a Class
+          Reservar Aula
         </ButtonLink>
       </div>
 
       {bookedInstances.length === 0 ? (
         <div className={styles.empty}>
           <p className={styles.emptyText}>
-            You don't have any upcoming bookings.
+            Você não tem nenhuma reserva futura.
           </p>
           <ButtonLink href="/book-class" variant="primary">
-            Browse Classes
+            Ver Aulas
           </ButtonLink>
         </div>
       ) : (
@@ -94,7 +101,7 @@ export default function BookingsPage() {
                             📍 {item.instance.location}
                           </span>
                           <span className={styles.detail}>
-                            Confirmed: {item.instance.bookedCount}/
+                            Confirmados: {item.instance.bookedCount}/
                             {item.instance.capacity}
                           </span>
                         </div>
@@ -103,7 +110,7 @@ export default function BookingsPage() {
                         onClick={() => handleCancel(item.instance.id)}
                         variant="danger"
                       >
-                        Cancel
+                        Cancelar
                       </Button>
                     </div>
                   )

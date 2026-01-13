@@ -6,24 +6,24 @@ export default function HomeStudent() {
   return (
     <>
       <div className={styles.card}>
-        <h2 className={styles.cardTitle}>Ready to train?</h2>
+        <h2 className={styles.cardTitle}>Pronto para treinar?</h2>
         <p className={styles.cardText}>
-          Browse our upcoming classes and reserve your spot. We offer classes
-          for all levels throughout the week.
+          Explore as nossas próximas aulas e reserve o seu lugar. Oferecemos
+          aulas para todos os níveis durante a semana.
         </p>
         <ButtonLink href="/book-class" variant="primary">
-          Book a Class
+          Reservar Aula
         </ButtonLink>
       </div>
 
       <div className={styles.reminder}>
         <p className={styles.reminderText}>
-          💡 <strong>Don't forget:</strong> Please complete your profile so our
-          teachers have all the relevant information about your experience and
-          any special requirements.
+          💡 <strong>Não se esqueça:</strong> Complete o seu perfil para que os
+          nossos professores tenham toda a informação relevante sobre a sua
+          experiência e quaisquer requisitos especiais.
         </p>
         <Link href="/profile" className={styles.profileLink}>
-          Update Profile →
+          Atualizar Perfil →
         </Link>
       </div>
     </>

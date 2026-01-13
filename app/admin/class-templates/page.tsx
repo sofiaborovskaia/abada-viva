@@ -45,16 +45,38 @@ export default function ClassTemplatesPage() {
     <div className={styles.container}>
       <div className={styles.header}>
         <div>
-          <h1 className={styles.title}>Class Templates</h1>
+          <h1 className={styles.title}>Modelos de Aula</h1>
           <p className={styles.subtitle}>
-            Manage recurring class schedules for {school.name}
+            Gerir e modificar horários de aulas recorrentes para {school.name}
           </p>
         </div>
         {!isCreating && !editingTemplate && (
           <Button onClick={() => setIsCreating(true)} variant="primary">
-            + New Template
+            + Novo Modelo
           </Button>
         )}
+      </div>
+
+      <div className={styles.infoSection}>
+        <div className={styles.infoCard}>
+          <h3 className={styles.infoTitle}>🔁 Aulas Recorrentes</h3>
+          <p className={styles.infoText}>
+            Os modelos criam automaticamente instâncias de aulas todas as
+            semanas para as próximas 4 semanas. Por exemplo, um modelo
+            "Segundas-feiras às 18h" gera 4 aulas: uma para cada segunda-feira
+            seguinte. <strong>Não precisa de fazer nada</strong> - as aulas são
+            geradas automaticamente até à data de fim que definir, ou para
+            sempre se não definir uma data de fim.
+          </p>
+        </div>
+        <div className={styles.infoCard}>
+          <h3 className={styles.infoTitle}>🎆 Aulas Únicas/Eventos</h3>
+          <p className={styles.infoText}>
+            Para criar uma aula única ou evento especial, defina uma{" "}
+            <strong>data de fim igual à data de início</strong>. Isto impede a
+            geração automática de aulas futuras, criando apenas uma instância.
+          </p>
+        </div>
       </div>
 
       {(isCreating || editingTemplate) && (

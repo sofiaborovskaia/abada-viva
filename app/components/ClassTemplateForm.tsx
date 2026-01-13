@@ -22,6 +22,17 @@ const DAYS: DayOfWeek[] = [
   "Sunday",
 ];
 
+// Portuguese day names for display (keeping English values for system)
+const DAY_NAMES: Record<DayOfWeek, string> = {
+  Monday: "Segunda-feira",
+  Tuesday: "Terça-feira",
+  Wednesday: "Quarta-feira",
+  Thursday: "Quinta-feira",
+  Friday: "Sexta-feira",
+  Saturday: "Sábado",
+  Sunday: "Domingo",
+};
+
 export default function ClassTemplateForm({
   template,
   schoolId,
@@ -67,13 +78,13 @@ export default function ClassTemplateForm({
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <h2 className={styles.formTitle}>
-        {template ? "Edit Class Template" : "Create New Class Template"}
+        {template ? "Editar Modelo de Aula" : "Criar Novo Modelo de Aula"}
       </h2>
 
       <div className={styles.formGrid}>
         <div className={styles.formGroup}>
           <label htmlFor="name" className={styles.label}>
-            Class Name *
+            Nome da Aula *
           </label>
           <input
             type="text"
@@ -83,13 +94,13 @@ export default function ClassTemplateForm({
             onChange={handleChange}
             required
             className={styles.input}
-            placeholder="e.g., Beginner Capoeira"
+            placeholder="ex: Capoeira Iniciantes"
           />
         </div>
 
         <div className={styles.formGroup}>
           <label htmlFor="teacher" className={styles.label}>
-            Teacher *
+            Professor *
           </label>
           <input
             type="text"
@@ -99,13 +110,13 @@ export default function ClassTemplateForm({
             onChange={handleChange}
             required
             className={styles.input}
-            placeholder="e.g., Mestre João"
+            placeholder="ex: Mestre João"
           />
         </div>
 
         <div className={styles.formGroup}>
           <label htmlFor="dayOfWeek" className={styles.label}>
-            Day of Week *
+            Dia da Semana *
           </label>
           <select
             id="dayOfWeek"
@@ -117,7 +128,7 @@ export default function ClassTemplateForm({
           >
             {DAYS.map((day) => (
               <option key={day} value={day}>
-                {day}
+                {DAY_NAMES[day]}
               </option>
             ))}
           </select>
@@ -125,7 +136,7 @@ export default function ClassTemplateForm({
 
         <div className={styles.formGroup}>
           <label htmlFor="time" className={styles.label}>
-            Time *
+            Horário *
           </label>
           <input
             type="time"
@@ -140,7 +151,7 @@ export default function ClassTemplateForm({
 
         <div className={styles.formGroup}>
           <label htmlFor="duration" className={styles.label}>
-            Duration (minutes) *
+            Duração (minutos) *
           </label>
           <input
             type="number"
@@ -157,7 +168,7 @@ export default function ClassTemplateForm({
 
         <div className={styles.formGroup}>
           <label htmlFor="capacity" className={styles.label}>
-            Capacity *
+            Capacidade *
           </label>
           <input
             type="number"
@@ -173,7 +184,7 @@ export default function ClassTemplateForm({
 
         <div className={`${styles.formGroup} ${styles.fullWidth}`}>
           <label htmlFor="location" className={styles.label}>
-            Location *
+            Local *
           </label>
           <input
             type="text"
@@ -183,13 +194,13 @@ export default function ClassTemplateForm({
             onChange={handleChange}
             required
             className={styles.input}
-            placeholder="e.g., Studio A"
+            placeholder="ex: Armazém Cultural"
           />
         </div>
 
         <div className={`${styles.formGroup} ${styles.fullWidth}`}>
           <label htmlFor="description" className={styles.label}>
-            Description
+            Descrição
           </label>
           <textarea
             id="description"
@@ -198,17 +209,17 @@ export default function ClassTemplateForm({
             onChange={handleChange}
             className={styles.textarea}
             rows={3}
-            placeholder="Optional description of the class..."
+            placeholder="Descrição opcional da aula..."
           />
         </div>
       </div>
 
       <div className={styles.formActions}>
         <Button type="button" onClick={onCancel} variant="ghost">
-          Cancel
+          Cancelar
         </Button>
         <Button type="submit" variant="secondary">
-          {template ? "Update Template" : "Create Template"}
+          {template ? "Atualizar Modelo" : "Criar Modelo"}
         </Button>
       </div>
     </form>

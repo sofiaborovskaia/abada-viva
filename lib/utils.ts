@@ -10,6 +10,20 @@ const DAY_TO_NUMBER: Record<DayOfWeek, number> = {
   Saturday: 6,
 };
 
+// Portuguese day names for display
+export const DAY_NAMES_PT: Record<DayOfWeek, string> = {
+  Monday: "Segunda-feira",
+  Tuesday: "Terça-feira",
+  Wednesday: "Quarta-feira",
+  Thursday: "Quinta-feira",
+  Friday: "Sexta-feira",
+  Saturday: "Sábado",
+  Sunday: "Domingo",
+};
+
+// Helper function to get Portuguese day name
+export const getDayNamePT = (day: DayOfWeek): string => DAY_NAMES_PT[day];
+
 /**
  * Generate class instances from a template for a given number of weeks
  */

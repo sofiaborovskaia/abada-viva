@@ -5,35 +5,22 @@ export default function HomeTeacher() {
   return (
     <>
       <div className={styles.card}>
-        <h2 className={styles.cardTitle}>Manage Your Classes</h2>
+        <h2 className={styles.cardTitle}>Aulas reservadas</h2>
         <p className={styles.cardText}>
-          View this week's booking overview to see which students have signed up
-          for your classes and track attendance.
+          Veja o <b>Resumo de Reservas</b> desta semana para ver quais alunos se
+          inscreveram nas suas aulas e acompanhe a presença.
         </p>
-        <ButtonLink href="/admin/bookings" variant="primary">
-          View Booking Overview
-        </ButtonLink>
+        <ButtonLink href="/admin/bookings">Ver Resumo de Reservas</ButtonLink>
       </div>
 
       <div className={styles.card}>
-        <h2 className={styles.cardTitle}>Class Templates</h2>
+        <h2 className={styles.cardTitle}>Modelos de Aula</h2>
         <p className={styles.cardText}>
-          Create recurring class schedules (templates) that automatically
-          generate class instances for the next 4 weeks. Students can book these
-          classes through their booking page.
+          Crie ou modifique horários de aulas recorrentes ou eventos puntuais.
+          Os alunos podem reservar estas aulas através da sua página de
+          reservas.
         </p>
-        <ButtonLink href="/admin/class-templates" variant="secondary">
-          Manage Templates
-        </ButtonLink>
-      </div>
-
-      <div className={styles.info}>
-        <p className={styles.infoText}>
-          ℹ️ <strong>How it works:</strong> Class templates define your
-          recurring schedule (e.g., "Mondays at 6 PM"). The system automatically
-          generates individual class instances that students can book. When you
-          update a template, future classes are regenerated.
-        </p>
+        <ButtonLink href="/admin/class-templates">Gerir Modelos</ButtonLink>
       </div>
     </>
   );

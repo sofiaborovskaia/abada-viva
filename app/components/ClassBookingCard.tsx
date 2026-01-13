@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ClassInstance, Booking } from "@/lib/types";
+import { getDayNamePT } from "@/lib/utils";
 import styles from "./ClassBookingCard.module.css";
 
 interface ClassBookingCardProps {
@@ -29,7 +30,7 @@ export default function ClassBookingCard({
   };
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString("pt-PT", {
       weekday: "short",
       month: "short",
       day: "numeric",

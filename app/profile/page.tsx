@@ -42,22 +42,22 @@ export default function ProfilePage() {
   };
 
   if (!user) {
-    return <div className={styles.container}>Loading...</div>;
+    return <div className={styles.container}>A carregar...</div>;
   }
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>My Profile</h1>
+      <h1 className={styles.title}>Meu Perfil</h1>
 
       {!isEditing ? (
         <div className={styles.profileView}>
           <div className={styles.field}>
-            <label className={styles.label}>First Name</label>
+            <label className={styles.label}>Nome</label>
             <p className={styles.value}>{user.firstName}</p>
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Last Name</label>
+            <label className={styles.label}>Apelido</label>
             <p className={styles.value}>{user.lastName}</p>
           </div>
 
@@ -67,8 +67,8 @@ export default function ProfilePage() {
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Phone</label>
-            <p className={styles.value}>{user.phone || "Not provided"}</p>
+            <label className={styles.label}>Telefone</label>
+            <p className={styles.value}>{user.phone || "Não fornecido"}</p>
           </div>
 
           <div className={styles.field}>
@@ -77,28 +77,28 @@ export default function ProfilePage() {
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Capoeira Experience</label>
+            <label className={styles.label}>Experiência em Capoeira</label>
             <p className={styles.value}>
-              {user.capoeiraExperience || "No information provided"}
+              {user.capoeiraExperience || "Nenhuma informação fornecida"}
             </p>
           </div>
 
           <div className={styles.field}>
-            <label className={styles.label}>Medical Conditions</label>
+            <label className={styles.label}>Condições Médicas</label>
             <p className={styles.value}>
-              {user.medicalConditions || "No information provided"}
+              {user.medicalConditions || "Nenhuma informação fornecida"}
             </p>
           </div>
 
           <Button onClick={() => setIsEditing(true)} variant="primary">
-            Edit Profile
+            Editar Perfil
           </Button>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.formField}>
             <label htmlFor="firstName" className={styles.formLabel}>
-              First Name
+              Nome
             </label>
             <input
               id="firstName"
@@ -114,7 +114,7 @@ export default function ProfilePage() {
 
           <div className={styles.formField}>
             <label htmlFor="lastName" className={styles.formLabel}>
-              Last Name
+              Apelido
             </label>
             <input
               id="lastName"
@@ -146,7 +146,7 @@ export default function ProfilePage() {
 
           <div className={styles.formField}>
             <label htmlFor="phone" className={styles.formLabel}>
-              Phone
+              Telefone
             </label>
             <input
               id="phone"
@@ -197,7 +197,7 @@ export default function ProfilePage() {
 
           <div className={styles.formField}>
             <label htmlFor="capoeiraExperience" className={styles.formLabel}>
-              Capoeira Experience
+              Experiência em Capoeira
             </label>
             <textarea
               id="capoeiraExperience"
@@ -206,14 +206,14 @@ export default function ProfilePage() {
                 setFormData({ ...formData, capoeiraExperience: e.target.value })
               }
               className={styles.textarea}
-              placeholder="Have you trained at other schools? What style? How long?"
+              placeholder="Já treinou noutras escolas? Que estilo? Durante quanto tempo?"
               rows={3}
             />
           </div>
 
           <div className={styles.formField}>
             <label htmlFor="medicalConditions" className={styles.formLabel}>
-              Medical Conditions
+              Condições Médicas
             </label>
             <textarea
               id="medicalConditions"
@@ -222,17 +222,17 @@ export default function ProfilePage() {
                 setFormData({ ...formData, medicalConditions: e.target.value })
               }
               className={styles.textarea}
-              placeholder="Allergies, injuries, conditions that teachers should know..."
+              placeholder="Alergias, lesões, condições que os professores devem saber..."
               rows={4}
             />
           </div>
 
           <div className={styles.buttonGroup}>
             <Button type="submit" variant="secondary">
-              Save
+              Guardar
             </Button>
             <Button type="button" onClick={handleCancel} variant="ghost">
-              Cancel
+              Cancelar
             </Button>
           </div>
         </form>

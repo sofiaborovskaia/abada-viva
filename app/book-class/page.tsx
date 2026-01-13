@@ -9,13 +9,20 @@ export default function BookClassPage() {
   const { user } = useUser();
   const { instances, bookClass, unbookClass, isBooked } = useBooking();
 
+  // Helper to capitalize first letter
+  const capitalizeFirst = (str: string) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
   // Group instances by date
   const groupedByDate = instances.reduce((acc, instance) => {
-    const dateKey = instance.date.toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-    });
+    const dateKey = capitalizeFirst(
+      instance.date.toLocaleDateString("pt-PT", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      })
+    );
 
     if (!acc[dateKey]) {
       acc[dateKey] = [];
@@ -40,9 +47,9 @@ export default function BookClassPage() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>Book Your Class</h1>
+        <h1 className={styles.title}>Reservar Aula</h1>
         <p className={styles.subtitle}>
-          Browse upcoming classes and reserve your spot
+          Navegue pelas próximas aulas e reserve sua vaga
         </p>
       </div>
 
@@ -64,7 +71,7 @@ export default function BookClassPage() {
       ))}
 
       {instances.length === 0 && (
-        <p className={styles.empty}>No classes available at the moment.</p>
+        <p className={styles.empty}>Nenhuma aula disponível no momento.</p>
       )}
     </div>
   );

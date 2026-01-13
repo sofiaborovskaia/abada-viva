@@ -26,25 +26,25 @@ export default function Navigation() {
           {user.role === "student" && (
             <>
               <Link href="/book-class" className={styles.link}>
-                Book Class
+                Reservar Aula
               </Link>
               <Link href="/bookings" className={styles.link}>
-                My Bookings
+                Minhas Reservas
               </Link>
             </>
           )}
           {user.role === "teacher" && (
             <>
               <Link href="/admin/class-templates" className={styles.link}>
-                Class Templates
+                Modelos de Aula
               </Link>
               <Link href="/admin/bookings" className={styles.link}>
-                Booking Overview
+                Resumo de Reservas
               </Link>
             </>
           )}
           <Link href="/profile" className={styles.link}>
-            My Profile
+            Meu Perfil
           </Link>
           <Button onClick={toggleRole} variant="ghost">
             {user.role === "student" ? "👨‍🎓" : "👨‍🏫"}

@@ -50,8 +50,10 @@ export default function ClassCard({
         <div className={styles.capacity}>
           <span className={styles.spotsLeft}>
             {isFull
-              ? "Full"
-              : `${spotsLeft} spot${spotsLeft !== 1 ? "s" : ""} left`}
+              ? "Lotada"
+              : `${spotsLeft} vaga${spotsLeft !== 1 ? "s" : ""} restante${
+                  spotsLeft !== 1 ? "s" : ""
+                }`}
           </span>
           <span className={styles.total}>
             {instance.bookedCount}/{instance.capacity}
@@ -65,12 +67,14 @@ export default function ClassCard({
           }`}
           disabled={isFull && !isBooked}
         >
-          {isBooked ? "Cancel Booking" : isFull ? "Full" : "Book"}
+          {isBooked ? "Cancelar Reserva" : isFull ? "Lotada" : "Reservar"}
         </button>
       </div>
 
       {instance.waitlistCount > 0 && (
-        <p className={styles.waitlist}>{instance.waitlistCount} on waitlist</p>
+        <p className={styles.waitlist}>
+          {instance.waitlistCount} na lista de espera
+        </p>
       )}
     </div>
   );
