@@ -1,0 +1,55 @@
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--black);
+}
+
+.cardText {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.reminder {
+  background: var(--yellow);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.reminderText {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.profileLink {
+  display: inline-block;
+  text-decoration: underline;
+  transition: 0.2s all ease-in;
+}
+
+.profileLink:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  background: #e0f2fe;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.infoText {
+  margin: 0;
+  line-height: 1.6;
+  color: #0c4a6e;
+}
